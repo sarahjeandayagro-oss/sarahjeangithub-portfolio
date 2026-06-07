@@ -7,416 +7,561 @@
   
   <style>
     /* -----------------------------------------
-       GLOBAL COLOR CONFIGURATION (Cyber-Minimalist Palette)
+       GLOBAL ENHANCED TECH PALETTE 
        ----------------------------------------- */
     :root {
-      --bg-dark: #000000;       /* Black - Premium deep backdrop */
-      --card-bg: #2f4550;      /* Charcoal Blue - Structural element containers */
-      --blue-slate: #586f7c;   /* Blue Slate - Dividers & clean borders */
-      --accent-mint: #b8dbd9;  /* Light Blue - Glowing interface accents & links */
-      --accent-gold: #f4f4f9;  /* Ghost White - High-contrast executive headers */
-      --text-light: #ffffff;   /* Pure White - Maximum readability body text */
-      --text-gray: #b8dbd9;    /* Light Blue tint - Secondary descriptions */
+      --bg-darker: #0a0f12;     /* Midnight Black - Immersive backdrop */
+      --bg-surface: #121a1f;    /* Charcoal Tech - Component background */
+      --border-glow: #1f2c33;   /* Slate Matte - Premium structural framing */
+      --accent-neon: #00f0ff;   /* Cyber Cyan - Electric accent & interaction lines */
+      --accent-mint: #b8dbd9;   /* Mint Ice - Crisp typography secondary details */
+      --text-header: #ffffff;   /* Pure White - Maximum contrast readability */
+      --text-body: #e2e8f0;     /* Light Gray - Ergonomic system body text */
+      --text-muted: #708894;    /* Muted Slate - Low-tier metadata logs */
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
 
     body {
-      background-color: var(--bg-dark);
-      color: var(--text-light);
-      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: var(--bg-darker);
+      color: var(--text-body);
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
       line-height: 1.6;
-      padding: 0 20px;
+      padding: 0 24px;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 20px 0;
+      padding: 30px 0;
     }
 
-    /* Header Navigation */
+    /* Modern Navigation Header */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 0;
-      border-bottom: 2px solid var(--blue-slate);
-      margin-bottom: 40px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-glow);
+      margin-bottom: 50px;
     }
 
     header .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: var(--accent-mint);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-header);
       text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    header .logo span {
+      color: var(--accent-neon);
     }
 
     header nav a {
-      color: var(--text-light);
+      color: var(--text-muted);
       text-decoration: none;
-      margin-left: 25px;
-      font-weight: 500;
-      transition: color 0.3s ease;
+      margin-left: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     header nav a:hover {
-      color: var(--accent-mint);
+      color: var(--accent-neon);
+      text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
     }
 
-    /* Hero Section Layout */
+    /* Premium Hero Workspace Layout */
     .hero-section {
       display: flex;
       flex-wrap: wrap;
-      gap: 40px;
+      gap: 50px;
       align-items: center;
-      margin-bottom: 60px;
+      margin-bottom: 80px;
+      padding: 20px 0;
     }
 
     .hero-text {
       flex: 1;
-      min-width: 300px;
+      min-width: 320px;
     }
 
     .hero-text h3 {
-      color: var(--accent-mint);
-      font-size: 14px;
-      letter-spacing: 2px;
+      color: var(--accent-neon);
+      font-size: 13px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      font-weight: 700;
     }
 
     .hero-text h1 {
-      font-size: 56px;
-      line-height: 1.1;
-      margin-bottom: 15px;
-      color: var(--accent-gold);
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 20px;
+      color: var(--text-header);
+      letter-spacing: -1.5px;
     }
 
     .hero-text h2 {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 400;
-      color: var(--text-gray);
+      color: var(--accent-mint);
       margin-bottom: 25px;
     }
 
-    /* Button Utilities */
+    /* High-Performance Interactive Button Groups */
     .btn-group {
-      margin-bottom: 30px;
+      margin-bottom: 35px;
+      display: flex;
+      gap: 15px;
     }
 
     .btn {
-      display: inline-block;
-      padding: 12px 28px;
-      border-radius: 6px;
-      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 32px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 14px;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       cursor: pointer;
     }
 
     .btn-primary {
-      background-color: var(--accent-mint);
-      color: var(--bg-dark);
-      margin-right: 15px;
+      background-color: var(--accent-neon);
+      color: var(--bg-darker);
     }
 
     .btn-primary:hover {
-      background-color: var(--accent-gold);
-      color: var(--bg-dark);
-      box-shadow: 0 4px 15px rgba(184, 219, 217, 0.4);
+      background-color: var(--text-header);
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.45);
+      transform: translateY(-2px);
     }
 
     .btn-secondary {
-      border: 2px solid var(--accent-mint);
-      color: var(--accent-mint);
+      border: 1px solid var(--border-glow);
+      color: var(--text-header);
+      background-color: rgba(255, 255, 255, 0.03);
     }
 
     .btn-secondary:hover {
-      background-color: var(--accent-mint);
-      color: var(--bg-dark);
+      border-color: var(--accent-neon);
+      color: var(--accent-neon);
+      background-color: rgba(0, 240, 255, 0.02);
+      transform: translateY(-2px);
+    }
+
+    /* Core Matrix Structural Tags */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .tags span {
-      display: inline-block;
-      background-color: var(--card-bg);
+      background-color: var(--bg-surface);
       color: var(--accent-mint);
-      padding: 6px 14px;
+      padding: 8px 18px;
       border-radius: 20px;
       font-size: 12px;
-      margin-right: 8px;
-      margin-bottom: 8px;
-      font-weight: 500;
-      border: 1px solid var(--blue-slate);
+      font-weight: 600;
+      border: 1px solid var(--border-glow);
     }
 
+    /* Hero Portrait Module Frame */
     .hero-image {
-      flex: 0 0 320px;
+      flex: 0 0 350px;
       margin: 0 auto;
     }
 
     .profile-card {
-      background-color: var(--card-bg);
-      padding: 20px;
-      border-radius: 20px;
+      background-color: var(--bg-surface);
+      padding: 24px;
+      border-radius: 24px;
       text-align: center;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-      border: 1px solid var(--blue-slate);
+      border: 1px solid var(--border-glow);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
     }
 
     .profile-card img {
       width: 100%;
-      height: auto;
-      border-radius: 12px;
+      height: 340px;
+      border-radius: 16px;
       object-fit: cover;
-      margin-bottom: 15px;
-      border: 2px solid var(--blue-slate);
+      margin-bottom: 18px;
+      border: 1px solid var(--border-glow);
+      filter: grayscale(10%) contrast(105%);
     }
 
     .profile-card h4 {
       font-size: 18px;
-      color: var(--accent-gold);
+      color: var(--text-header);
+      font-weight: 700;
     }
 
-    /* Section Main Typography */
+    /* Global Typographic Parameters */
     .section-title {
-      font-size: 28px;
-      color: var(--accent-gold);
-      margin-bottom: 10px;
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--text-header);
+      margin-bottom: 12px;
+      letter-spacing: -1px;
     }
 
     .section-desc {
-      color: var(--text-gray);
-      margin-bottom: 30px;
-      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 45px;
+      font-size: 16px;
+      max-width: 700px;
     }
 
-    /* Structured Layout Timelines */
+    /* Responsive Grid Engine Maps */
     .timeline-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      gap: 25px;
-      margin-bottom: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
     }
 
     .timeline-card {
-      background-color: var(--card-bg);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-      border: 1px solid var(--blue-slate);
+      background-color: var(--bg-surface);
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid var(--border-glow);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      transition: border-color 0.3s ease;
+    }
+
+    .timeline-card:hover {
+      border-color: rgba(0, 240, 255, 0.25);
     }
 
     .year-badge {
       display: inline-block;
-      background-color: var(--accent-mint);
-      color: var(--bg-dark);
-      padding: 4px 12px;
+      background-color: rgba(0, 240, 255, 0.1);
+      color: var(--accent-neon);
+      padding: 6px 16px;
       font-size: 11px;
-      font-weight: bold;
-      border-radius: 4px;
+      font-weight: 700;
+      border-radius: 6px;
       text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       align-self: flex-start;
+      border: 1px solid rgba(0, 240, 255, 0.2);
     }
 
     .timeline-card h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: var(--accent-gold);
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: var(--text-header);
+      font-weight: 800;
     }
 
     .timeline-card h4 {
-      font-size: 16px;
-      color: var(--accent-mint);
-      margin-top: 15px;
-      margin-bottom: 5px;
-      font-weight: 600;
+      font-size: 15px;
+      color: var(--accent-neon);
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .timeline-card p {
-      color: var(--text-light);
+      color: var(--text-body);
       font-size: 14px;
       text-align: justify;
-      margin-bottom: 15px;
+      opacity: 0.9;
     }
 
-    /* Standardized Card Image Rows */
+    /* Multi-Asset Aligned Image Matrix Row */
     .card-img-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
       gap: 12px;
-      margin-top: 15px;
+      margin-top: 20px;
       width: 100%;
     }
 
     .card-img-row img {
       width: 100%;
-      height: 180px;
-      border-radius: 8px;
-      border: 2px solid var(--blue-slate);
+      height: 120px;
+      border-radius: 10px;
+      border: 1px solid var(--border-glow);
       object-fit: cover;
+      transition: all 0.3s ease;
     }
 
-    /* Comprehensive Enterprise Card Elements */
+    .card-img-row img:hover {
+      border-color: var(--accent-neon);
+      transform: scale(1.02);
+    }
+
+    /* Cisco Style Premium Certificate Showcase Module */
+    .certificate-container-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .cert-display-card {
+      background-color: rgba(10, 15, 18, 0.7);
+      border: 1px solid var(--border-glow);
+      border-radius: 16px;
+      padding: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .cert-display-card:hover {
+      border-color: var(--accent-neon);
+      box-shadow: 0 10px 25px rgba(0, 240, 255, 0.15);
+    }
+
+    .cert-img-wrapper {
+      width: 100%;
+      background-color: #ffffff;
+      padding: 8px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-glow);
+    }
+
+    .cert-img-wrapper img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .cert-meta-info h5 {
+      color: var(--text-header);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .cert-meta-info p {
+      font-size: 13px;
+      color: var(--text-body);
+      opacity: 0.8;
+      margin-bottom: 14px;
+      text-align: left;
+    }
+
+    .cert-date-tag {
+      display: inline-block;
+      background-color: #1d3557;
+      color: #4cc9f0;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(76, 201, 240, 0.2);
+    }
+
+    /* Enterprise Structural Container Block */
     .enterprise-card {
-      background-color: var(--card-bg);
-      padding: 35px;
-      border-radius: 15px;
+      background-color: var(--bg-surface);
+      padding: 45px;
+      border-radius: 24px;
       margin-bottom: 50px;
-      border: 1px solid var(--blue-slate);
+      border: 1px solid var(--border-glow);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
 
-    /* 1st Year Multi-Project Deep Dive Grid Styling */
+    /* 1st Year Core Project Array Grid Matrix */
     .first-year-project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 25px;
+      margin-bottom: 25px;
     }
 
     .project-sub-card {
-      background-color: rgba(0, 0, 0, 0.3);
-      border: 1px solid var(--blue-slate);
-      border-radius: 10px;
-      padding: 15px;
+      background-color: rgba(10, 15, 18, 0.5);
+      border: 1px solid var(--border-glow);
+      border-radius: 16px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: border-color 0.3s ease;
+    }
+
+    .project-sub-card:hover {
+      border-color: rgba(0, 240, 255, 0.2);
     }
 
     .project-sub-card img {
       width: 100%;
       height: 180px;
-      border-radius: 6px;
-      margin-bottom: 12px;
-      border: 1px solid var(--blue-slate);
+      border-radius: 10px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border-glow);
       object-fit: cover;
     }
 
     .project-sub-card h5 {
-      color: var(--accent-mint);
+      color: var(--text-header);
       font-size: 16px;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      font-weight: 700;
     }
 
     .project-sub-card p {
       font-size: 13px;
-      color: var(--accent-gold);
+      color: var(--accent-mint);
       text-align: justify;
+      opacity: 0.85;
+      line-height: 1.5;
     }
 
     .sub-system-box {
-      background-color: var(--bg-dark);
-      padding: 25px;
-      border-radius: 10px;
-      border-left: 4px solid var(--accent-mint);
-      border: 1px solid var(--blue-slate);
+      background-color: var(--bg-darker);
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid var(--border-glow);
+      transition: border-color 0.3s ease;
+    }
+
+    .sub-system-box:hover {
+      border-color: rgba(0, 240, 255, 0.25);
     }
 
     .sub-system-box h5 {
       font-size: 18px;
-      color: var(--accent-gold);
-      margin-bottom: 10px;
+      color: var(--text-header);
+      margin-bottom: 12px;
+      font-weight: 700;
     }
 
     .sub-system-box p {
-      font-size: 14px;
-      color: var(--text-light);
+      font-size: 13.5px;
+      color: var(--text-body);
       text-align: justify;
+      opacity: 0.9;
     }
 
-    /* Layout for Skills and Footer Contact Section */
+    /* Core Footprint Framework Layout Alignment */
     .footer-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      gap: 40px;
-      margin-top: 40px;
-      padding-top: 40px;
-      border-top: 2px solid var(--blue-slate);
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 50px;
+      margin-top: 60px;
+      padding-top: 50px;
+      border-top: 1px solid var(--border-glow);
     }
 
     .contact-card {
-      background-color: var(--card-bg);
-      padding: 30px;
-      border-radius: 15px;
-      border: 1px solid var(--blue-slate);
+      background-color: var(--bg-surface);
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid var(--border-glow);
     }
 
     .contact-card h3 {
-      font-size: 24px;
-      color: var(--accent-gold);
+      font-size: 28px;
+      color: var(--text-header);
       margin-bottom: 5px;
+      font-weight: 800;
     }
 
     .contact-card h4 {
-      font-size: 18px;
-      margin-bottom: 15px;
-      border-bottom: 1px solid var(--blue-slate);
-      padding-bottom: 8px;
-      color: var(--accent-gold);
+      font-size: 14px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid var(--border-glow);
+      padding-bottom: 12px;
+      color: var(--accent-neon);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .contact-item {
       font-size: 14px;
-      color: var(--text-light);
-      margin-bottom: 12px;
+      color: var(--text-body);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-item b {
+      color: var(--accent-mint);
+      margin-right: 8px;
+      font-weight: 600;
     }
 
     .contact-item a {
-      color: var(--accent-mint);
+      color: var(--text-header);
       text-decoration: none;
-      font-weight: 500;
+      transition: color 0.2s ease;
     }
     
     .contact-item a:hover {
+      color: var(--accent-neon);
       text-decoration: underline;
     }
 
-    /* Operations Gallery Grid */
+    /* Operational Field Review Matrix Gallery */
     .gallery-title {
-      font-size: 18px;
-      color: var(--accent-gold);
-      margin-top: 40px;
-      margin-bottom: 15px;
+      font-size: 14px;
+      color: var(--accent-neon);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
     }
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-bottom: 40px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
 
     .gallery-grid img {
       width: 100%;
-      height: 160px;
-      border-radius: 6px;
-      border: 2px solid var(--blue-slate);
+      height: 140px;
+      border-radius: 12px;
+      border: 1px solid var(--border-glow);
       object-fit: cover;
+      transition: all 0.3s ease;
     }
 
+    .gallery-grid img:hover {
+      border-color: var(--accent-neon);
+      transform: translateY(-2px);
+    }
+
+    /* Production Footer Block */
     footer.bottom-bar {
       text-align: center;
-      padding: 30px 0;
+      padding: 40px 0 20px 0;
       font-size: 13px;
-      color: var(--text-gray);
-      border-top: 1px solid var(--blue-slate);
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-glow);
       width: 100%;
+      margin-top: 60px;
     }
 
     @media (max-width: 768px) {
       .hero-section { flex-direction: column; text-align: center; }
       .timeline-grid, .footer-container { grid-template-columns: 1fr; }
-      .hero-text h1 { font-size: 40px; }
+      .hero-text h1 { font-size: 44px; }
+      .btn-group { justify-content: center; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -424,9 +569,9 @@
 
   <div class="container">
     
-    <!-- HEADER LINKS -->
+    <!-- HEADER NAVIGATION LINKS -->
     <header>
-      <a href="#" class="logo">Sarah Jean Dayagro</a>
+      <a href="#" class="logo">SARAH<span>.IS</span></a>
       <nav>
         <a href="#home">Home</a>
         <a href="#timeline">Timeline Portfolio</a>
@@ -440,7 +585,7 @@
         <h3>Information Systems Student | Systems Analyst</h3>
         <h1>Portfolio</h1>
         <h2>Hi, I'm Sarah Jean Dayagro!</h2>
-        <p style="color: var(--text-light); font-size: 16px; margin-bottom: 25px; text-align: justify;">
+        <p style="color: var(--text-body); font-size: 16px; margin-bottom: 30px; text-align: justify; opacity: 0.9;">
           A 3rd-year Bachelor of Science in Information Systems student at Davao del Norte State College. 
           I am dedicated to analyzing technical user and organizational requirements, designing relational entity-relationship database schemas, and engineering comprehensive web applications that optimize operational productivity.
         </p>
@@ -451,56 +596,58 @@
         </div>
 
         <div class="tags">
-          <span>Systems Analysis / System Developer</span>
-          <span>MySQL / phpMyAdmin</span>
+          <span>Systems Analysis & Development</span>
+          <span>Relational Database Architecture</span>
+          <span>MySQL / phpMyAdmin Matrix</span>
         </div>
       </div>
 
       <div class="hero-image">
         <div class="profile-card">
-          <img src="sarah.jpg" alt="Sarah Jean Dayagro Portrait View">
+          <img src="portfolio/sarah.jpg" alt="Sarah Jean Dayagro Portrait View">
           <h4>Sarah Jean Dayagro</h4>
         </div>
       </div>
     </section>
 
-    <hr style="border: 0; border-top: 1px solid var(--blue-slate); margin: 40px 0;">
+    <!-- HORIZONTAL LOGICAL SEPARATOR -->
+    <hr style="border: 0; border-top: 1px solid var(--border-glow); margin: 20px 0 50px 0;">
 
     <!-- EXPERIENCES TIMELINE GRID -->
     <section id="timeline">
       <h2 class="section-title">Outputs from 1st Year to 3rd Year</h2>
-      <p class="section-desc">A systematic log detailing my technical training progress, interactive web developments, and data engineering projects at DNSC.</p>
+      <p class="section-desc">A systematic logs infrastructure detailing my technical training milestones, interactive web developments, and data engineering projects at DNSC.</p>
 
       <!-- 1ST YEAR EXTENDED FULL-WIDTH TIMELINE HUB -->
-      <div class="enterprise-card" style="margin-bottom: 30px;">
+      <div class="enterprise-card" style="margin-bottom: 35px;">
         <span class="year-badge">1st Year Foundations</span>
-        <h2 style="margin-bottom: 10px;">Multimedia Short Films, Desktop Engineering & Early Web Architecture</h2>
-        <p style="margin-bottom: 20px; text-align: justify;">
+        <h2 style="margin-bottom: 12px; font-weight: 800; letter-spacing: -0.5px;">Multimedia Short Films, Desktop Engineering & Early Web Architecture</h2>
+        <p style="margin-bottom: 25px; text-align: justify; opacity: 0.9; font-size: 15px;">
           My first year centered on programming logic foundations, desktop UI modeling, introductory computing designs, and digital storytelling projects. I built a dynamic set of projects traversing software engineering and creative multimedia.
         </p>
 
         <div class="first-year-project-grid">
-          <!-- Multimedia Short Films -->
+          <!-- Multimedia Short Films Module -->
           <div class="project-sub-card">
-            <img src="6.jpg" alt="Short Film Screenings">
+            <img src="portfolio/6.jpg" alt="Short Film Screenings Block">
             <h5>Multimedia Production: LUCID & Part of Your World</h5>
             <p>
               Co-directed, filmed, and edited **LUCID**, a short film project that won a *Best Support Artist* award for our main villain. Also created **Part of Your World**, a detailed group music video recreation patterned after the classic YouTube format.
             </p>
           </div>
 
-          <!-- Pares Overload Java/C# Application -->
+          <!-- Pares Overload Java Application -->
           <div class="project-sub-card">
-            <img src="4.jpg" alt="Diwata Pares Overload Application UI">
+            <img src="portfolio/4.jpg" alt="Diwata Pares Overload Application UI Showcase">
             <h5>Diwata Pares Overload Order System</h5>
             <p>
               Designed and programmed a standalone food order system desktop application. Built intuitive food item selection matrix layouts, individual item pricing configurations, and real-time total checkout calculation sheets.
             </p>
           </div>
 
-          <!-- L&J Pastries Hub -->
+          <!-- L&J Pastries Hub Web Architecture -->
           <div class="project-sub-card">
-            <img src="1.jpg" alt="L&J Pastries Study Hub Layout">
+            <img src="portfolio/1.jpg" alt="L&J Pastries Study Hub Layout Framework">
             <h5>L&J Pastries Study Hub Platform</h5>
             <p>
               Engineered a mockup web architecture for an interactive study cafe. Features specialized product grids displaying snacks and drinks alongside designated spatial location blocks mapping quick-access internet connection lounges.
@@ -509,27 +656,27 @@
         </div>
 
         <div class="first-year-project-grid">
-          <!-- Programming 1 Final -->
+          <!-- Programming 1 Console Execution -->
           <div class="project-sub-card">
-            <img src="2.jpg" alt="Programming 1 Java Coding File">
+            <img src="portfolio/2.jpg" alt="Programming 1 Java Coding File Stack">
             <h5>Programming 1: Java Core Final Activity</h5>
             <p>
               Embarked on a transformative Java coding journey. Built complex logic handling, data parsing loops, and foundational console workflows while mastering troubleshooting, compilation checking, and source file debugging.
             </p>
           </div>
 
-          <!-- Intro to Computing Graphics -->
+          <!-- Intro to Computing Engineering Designs -->
           <div class="project-sub-card">
-            <img src="3.jpg" alt="Intro to Computing Vector Graphic">
+            <img src="portfolio/3.jpg" alt="Intro to Computing Vector Graphic Asset">
             <h5>Introduction to Computing Vector Art</h5>
             <p>
               Constructed digital vector illustrations and layout mockups within introductory coursework modules, designing symmetrical robot interfaces and creative celebratory graphical patterns.
             </p>
           </div>
 
-          <!-- Programming 2 Final -->
+          <!-- Programming 2 Collaborative Project Defense -->
           <div class="project-sub-card">
-            <img src="5.jpg" alt="Programming 2 Systems Defense">
+            <img src="portfolio/5.jpg" alt="Programming 2 Systems Defense Blueprint">
             <h5>Programming 2 Final Project System Defense</h5>
             <p>
               A culminating programming final project testing advanced object-oriented workflows and interface development. Successfully completed the engineering sprint, testing patterns, and final team presentation defense.
@@ -537,131 +684,178 @@
           </div>
         </div>
 
-        <!-- Backend DB Stack Infrastructure -->
-        <h4 style="color: var(--accent-mint); margin-bottom: 10px;">Local Database Architectures (XAMPP Environment)</h4>
-        <p style="font-size: 14px; text-align: justify; margin-bottom: 15px;">
+        <!-- Backend Stack Framework Sub-Panel -->
+        <h4 style="color: var(--accent-neon); margin-bottom: 12px;">Local Database Architectures (XAMPP Environment)</h4>
+        <p style="font-size: 14px; text-align: justify; margin-bottom: 20px; opacity: 0.9;">
           Provisioned local Apache hosting networks and crafted relational database tables. Compiled structural validation constraints and constructed clean entity metrics using target MySQL scripts.
         </p>
-        <div class="card-img-row">
-          <img src="xamp.jpg" alt="XAMPP Backend Engine Panel">
-          <img src="xampp.jpg" alt="phpMyAdmin MySQL Console Workspace">
+        <div class="card-img-row" style="grid-template-columns: repeat(2, 1fr); max-width: 600px;">
+          <img src="portfolio/xamp.jpg" alt="XAMPP Backend Engine Panel Infrastructure" style="height: 160px;">
+          <img src="portfolio/xampp.jpg" alt="phpMyAdmin MySQL Console Workspace" style="height: 160px;">
         </div>
       </div>
 
       <!-- 2ND AND 3RD YEAR TIMELINE ROW -->
       <div class="timeline-grid">
-        <!-- SECOND YEAR CONTAINER -->
+        <!-- SECOND YEAR MILESTONES CARD -->
         <div class="timeline-card">
           <div>
             <span class="year-badge">2nd Year Milestones</span>
             <h3>Quantitative Research Poster Showcase</h3>
-            <p>
+            <p style="margin-bottom: 15px;">
               Co-authored, statistically modeled, and formulated a quantitative research project evaluating computing role trends and perceptions at DNSC. Successfully presented and defended the thesis project, securing <b>2nd Place Best Poster Design</b> at the Institute of Computing Symposium.
             </p>
             
-            <h4>Code Layout Debugging & HCI</h4>
+            <h4>Code Layout Debugging & HCI Run</h4>
             <p>
               Analyzed underlying stylesheet layouts to master front-end error tracking protocols. Successfully resolved structural alignment flaws, parent container constraints, and complex grid-template boundaries.
             </p>
           </div>
           
-          <div class="card-img-row">
-            <img src="wom.jpg" alt="Award Winning Quantitative Research Poster">
-            <img src="2nd win.jpg" alt="Symposium Certificate of Recognition">
-            <img src="debuging.jpg" alt="CSS Troubleshooting Box Model">
-            <img src="debug.jpg" alt="Layout Alignment Testing Studio">
+          <div class="card-img-row" style="grid-template-columns: repeat(4, 1fr);">
+            <img src="portfolio/wom.jpg" alt="Award Winning Quantitative Research Poster Model">
+            <img src="portfolio/2nd win.jpg" alt="Symposium Certificate of Recognition Asset">
+            <img src="portfolio/debuging.jpg" alt="CSS Troubleshooting Box Model Target">
+            <img src="portfolio/debug.jpg" alt="Layout Alignment Testing Studio Interface">
           </div>
         </div>
 
-        <!-- THIRD YEAR CONTAINER -->
+        <!-- THIRD YEAR ENTERPRISE SOLUTIONS CARD -->
         <div class="timeline-card">
           <div>
-            <span class="year-badge">3rd Year Enterprise Solutions</span>
+            <span class="year-badge">3rd Year Solutions</span>
             <h3>RentScape: Mobile Property Allocation Platform</h3>
             <p style="text-align: justify;">
               Co-engineered an end-to-end mobile application framework designed to automate property discovery, vacancy metrics tracking, and tenant data handling for apartments and boarding systems in Panabo City. Showcased at the <b>Startup Sundayag 2025 Exhibition</b>, receiving formal certification for its exceptional operational design strategy and requirements blueprinting.
             </p>
-            <ul>
-              <li style="font-size: 13px; color: var(--accent-mint); margin-bottom: 4px;"><b>System Logic:</b> Enabled custom query filter routing and secure logging tracks.</li>
-              <li style="font-size: 13px; color: var(--accent-mint);"><b>Technical Layout:</b> Designed stylized multi-page marketing flyers and technical data asset layouts.</li>
+            <ul style="margin-top: 15px; list-style-position: inside;">
+              <li style="font-size: 13px; color: var(--accent-mint); margin-bottom: 4px;"><b>System Logic:</b> Enabled custom query filter routing and secure logs tracks.</li>
+              <li style="font-size: 13px; color: var(--accent-mint);"><b>Technical Layout:</b> Designed stylized multi-page marketing flyers and technical data assets.</li>
             </ul>
           </div>
           
-          <div class="card-img-row">
-            <img src="rentscape.jpg" alt="RentScape System Launch Flyer Side A">
-            <img src="rent.jpg" alt="RentScape System Launch Flyer Side B">
-            <img src="scape.jpg" alt="TechSpire Launch Exhibition Stand Space">
+          <div class="card-img-row" style="grid-template-columns: repeat(3, 1fr);">
+            <img src="portfolio/rentscape.jpg" alt="RentScape System Launch Flyer Side A Layout">
+            <img src="portfolio/rent.jpg" alt="RentScape System Launch Flyer Side B Layout">
+            <img src="portfolio/scape.jpg" alt="TechSpire Launch Exhibition Stand Space Module">
           </div>
         </div>
       </div>
 
-      <!-- ACTIVE PROPOSALS BLOCK -->
-      <div class="enterprise-card">
-        <h4 style="font-size: 18px; margin-bottom: 20px; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 1px;">Active High-Tier System Proposals</h4>
+      <!-- PREMIUM CERTIFICATES RECOGNITION BLOCK -->
+      <div class="enterprise-card" style="margin-bottom: 35px;">
+        <span class="year-badge">Certifications</span>
+        <h2 style="margin-bottom: 6px; font-weight: 800; letter-spacing: -0.5px;">Recognitions & Credentials</h2>
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">Recognitions earned through verified online courses, technical sprints, and validation programs.</p>
         
-        <div class="timeline-grid" style="grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); margin-bottom: 0;">
-          <!-- BUZZIFY MODULE -->
-          <div class="sub-system-box">
-            <h5>Buzzify: Web Marketing Platform</h5>
-            <p style="margin-bottom: 15px;">
-              A specialized web-based application built to enhance digital marketing workflows and brand visibility metrics for the Greater RJ Appliance & Trading Corporation. Successfully finalized core stakeholder requirements and business logic pitching.
-            </p>
-            <div class="card-img-row">
-              <img src="pitching.jpg" alt="Buzzify Strategic Field Evaluation">
-              <img src="out.jpg" alt="Corporate Field Verification Group Session">
+        <div class="certificate-container-grid">
+          <!-- Cybersecurity Essentials Card -->
+          <div class="cert-display-card">
+            <div class="cert-img-wrapper">
+              <img src="portfolio/junior cybersecurity.png" alt="Cisco Cybersecurity Essentials Certificate Frame">
+            </div>
+            <div class="cert-meta-info">
+              <h3>CISCO NETWORKING ACADEMY</h3>
+              <h5>Cybersecurity Essentials</h5>
+              <p>Offered by Davao Del Norte State College through the Cisco Networking Academy training pipeline program.</p>
+              <span class="cert-date-tag">12 May 2026</span>
             </div>
           </div>
 
-          <!-- E-LIBRARY MODULE -->
+          <!-- HTML Essentials Card -->
+          <div class="cert-display-card">
+            <div class="cert-img-wrapper">
+              <img src="portfolio/junior cybersecurity.png" alt="Cisco HTML Essentials Certificate Frame">
+            </div>
+            <div class="cert-meta-info">
+              <h3>CISCO NETWORKING ACADEMY · JS INSTITUTE</h3>
+              <h5>HTML Essentials</h5>
+              <p>Offered by DICT-ITU DTC Initiative through the global Cisco Networking Academy training standard modules.</p>
+              <span class="cert-date-tag">17 May 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTIVE ENTERPRISE PROPOSALS BLOCK -->
+      <div class="enterprise-card">
+        <h4 style="font-size: 14px; margin-bottom: 25px; color: var(--accent-neon); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700;">Active High-Tier System Proposals</h4>
+        
+        <div class="timeline-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); margin-bottom: 0; gap: 24px;">
+          <!-- BUZZIFY WEB ARRAYS MODULE -->
+          <div class="sub-system-box">
+            <h5>Buzzify: Web Marketing Platform</h5>
+            <p style="margin-bottom: 20px;">
+              A specialized web-based application built to enhance digital marketing workflows and brand visibility metrics for the Greater RJ Appliance & Trading Corporation. Successfully finalized core stakeholder requirements and business logic pitching.
+            </p>
+            <div class="card-img-row" style="grid-template-columns: repeat(2, 1fr);">
+              <img src="portfolio/pitching.jpg" alt="Buzzify Strategic Field Evaluation Event">
+              <img src="portfolio/out.jpg" alt="Corporate Field Verification Group Session">
+            </div>
+          </div>
+
+          <!-- E-LIBRARY AUTOMATION MODULE -->
           <div class="sub-system-box">
             <h5>E-Library Portal & Registration</h5>
-            <p style="margin-bottom: 15px;">
+            <p style="margin-bottom: 20px;">
               An automated platform engineered for the Panabo City Library to streamline visitor registration and workstation monitoring. Integrates barcode/QR code authentication paths for fluid analytics reporting.
             </p>
-            <div class="card-img-row">
-              <img src="library.jpg" alt="Blade System Dashboard Source Code Integration">
-              <img src="system.jpg" alt="E-Library Core Application Directory Map">
+            <div class="card-img-row" style="grid-template-columns: repeat(2, 1fr);">
+              <img src="portfolio/library.jpg" alt="Blade System Dashboard Source Code Integration Layout">
+              <img src="portfolio/system.jpg" alt="E-Library Core Application Directory Map Structure">
+            </div>
+          </div>
+
+          <!-- INVENTORY MANAGEMENT SYSTEM MODULE -->
+          <div class="sub-system-box">
+            <h5>DMW XI: Inventory Management Platform</h5>
+            <p style="margin-bottom: 20px;">
+              An Inventory Management System with Barcode Integration engineered for the Department of Migrant Workers Regional Office XI. Streamlines real-time asset tracking, supply logging, and automated form generation for PAR and ICS.
+            </p>
+            <div class="card-img-row" style="grid-template-columns: repeat(2, 1fr);">
+              <img src="portfolio/2fadfe57-cdeb-4693-b0a0-e91cd2c2745f.jpg" alt="Stakeholder Field Interview Systems Analysis Workspace">
+              <img src="portfolio/6b51537a-0c61-4f35-ae49-4c752ad4aaee.jpg" alt="DMW Regional Office XI Deployment Team Group Setup">
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER LAYOUT CONTAINER -->
+    <!-- FOOTER PIPELINE ROUTING CONTAINER -->
     <section class="footer-container" id="contact">
-      <!-- CONTACT CARD INFORMATION BOX -->
-      <div class="contact-card" style="width: 100%;">
+      <!-- CONTACT CARD CORE NODE INFO -->
+      <div class="contact-card">
         <h3>Get In Touch</h3>
-        <h4>Contact & Networks</h4>
+        <h4>Contact Channels & Networks</h4>
         
-        <div style="margin-top: 20px;">
+        <div style="margin-top: 10px;">
           <div class="contact-item"><b>📞 Phone Contact:</b> +63 965 083 8942</div>
           <div class="contact-item"><b>✉️ Email Address:</b> <a href="mailto:sarahjean.dayagro@gmail.com">sarahjean.dayagro@gmail.com</a></div>
           <div class="contact-item"><b>📍 Location Address:</b> Panabo City, Davao del Norte, Philippines</div>
         </div>
         
-        <h4 style="margin-top: 30px;">Professional Channels</h4>
-        <div style="margin-top: 15px;">
+        <h4 style="margin-top: 35px; margin-bottom: 15px;">Professional Channels</h4>
+        <div>
           <div class="contact-item"><b>💼 LinkedIn Account:</b> <a href="#">linkedin.com/in/sarah-jean-dayagro</a></div>
           <div class="contact-item"><b>🏫 Institutional Portal:</b> <a href="https://dnsc.edu.ph" target="_blank">Davao del Norte State College</a></div>
         </div>
       </div>
 
-      <!-- GALLERY CONTAINER FOR THE OPERATIONAL RUNS -->
+      <!-- OPERATIONAL FIELD DISCOVERY TARGET GALLERY -->
       <div>
-        <h3 class="gallery-title" style="margin-top: 0;">Institutional Operations Gallery</h3>
+        <h3 class="gallery-title">Institutional Operations Gallery</h3>
         <div class="gallery-grid">
-          <img src="outline.jpg" alt="System Outline Defense Committee Meeting">
-          <img src="defec.jpg" alt="DNSC Institute Library Evaluation Milestone">
-          <img src="lib.jpg" alt="Panabo City Library Field Research Evaluation">
-          <img src="library.jpg" alt="Greater RJ Appliance Center On-Site Implementation">
+          <img src="portfolio/outline.jpg" alt="System Outline Defense Committee Evaluation Run">
+          <img src="portfolio/defec.jpg" alt="DNSC Institute Library Evaluation Metric Verification">
+          <img src="portfolio/lib.jpg" alt="Panabo City Library Field Research Analysis Matrix">
+          <img src="portfolio/library.jpg" alt="Greater RJ Appliance Center On-Site Implementation Review">
         </div>
       </div>
     </section>
 
-    <!-- MAIN FOOTER BLOCK -->
+    <!-- ARCHITECTURE TIMELINE DEPLOYMENT FOOTER -->
     <footer class="bottom-bar">
-      <p>© 2026 Sarah Jean Dayagro · Developed via Custom HTML Deployment Integration for GitHub Pages</p>
+      <p>© 2026 Sarah Jean Dayagro · Engineered via Custom Production HTML Framework Layouts for GitHub Pages</p>
     </footer>
 
   </div>
